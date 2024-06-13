@@ -263,7 +263,7 @@ return [
     'register_url' => 'register',
     'password_reset_url' => 'password/reset',
     'password_email_url' => 'password/email',
-    'profile_url' => false,
+    'profile_url' => true,
 
     /*
     |--------------------------------------------------------------------------
@@ -315,6 +315,7 @@ return [
             'url' => 'admin/blog',
             'can' => 'manage-blog',
         ],
+        
         [
             'text' => 'pages',
             'url' => 'admin/pages',
@@ -327,6 +328,12 @@ return [
             'text' => 'profile',
             'url' => 'admin/settings',
             'icon' => 'fas fa-fw fa-user',
+        ],
+        [
+            'text' => 'Noticias',
+            'url'  => 'admin/noticias',
+            'icon' => 'fas fa-fw fa-newspaper',
+            // Esto se utilizará para restringir el acceso solo a administradores
         ],
         [
             'text' => 'change_password',
@@ -370,6 +377,7 @@ return [
                     'url' => '#',
                 ],
             ],
+            
         ],
         ['header' => 'labels'],
         [
@@ -387,6 +395,8 @@ return [
             'icon_color' => 'cyan',
             'url' => '#',
         ],
+
+        
     ],
 
     /*
